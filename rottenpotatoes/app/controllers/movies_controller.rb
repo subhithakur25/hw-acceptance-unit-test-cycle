@@ -14,6 +14,8 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
+    @has_director = params[:has_director]
+    @no_dir_movie = params[:no_dir_movie]    
   end
 
   def new
