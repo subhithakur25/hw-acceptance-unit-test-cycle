@@ -27,9 +27,6 @@ class MoviesController < ApplicationController
       redirect_to :sort => sort, :ratings => @selected_ratings and return
     end    
     @movies = Movie.where(rating: @selected_ratings.keys).order(ordering)
-    if @has_director = params[:has_director]
-      @no_dir_movie = Movie.find(params[:id]).title
-    end
   end
 
   def new
@@ -54,13 +51,12 @@ class MoviesController < ApplicationController
   end
 
   def similar
-    dirname = Movie.find(params[:id]).director
-    if dirname.nil? || dirname == ""
-      movie_title = Movie.find(params[:id]).title
+    movie_title = Movie.find(params[:id]).title
+    @movies = Movie.with_director(movie_title)
+      if @movies.nil? || @movies == ""
       flash[:notice] = "'#{movie_title}' has no director info."
       redirect_to movies_path
     end    
-    @movies = Movie.with_director(dirname)
   end
 
   def destroy
