@@ -1,0 +1,34 @@
+/home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activesupport-4.2.10/lib/active_support/core_ext/object/duplicable.rb:111: warning: BigDecimal.new is deprecated; use BigDecimal() method instead.
+/home/ec2-user/.rvm/rubies/ruby-2.6.6/bin/ruby -I/home/ec2-user/.rvm/gems/ruby-2.6.6/gems/rspec-core-3.7.1/lib:/home/ec2-user/.rvm/gems/ruby-2.6.6/gems/rspec-support-3.7.1/lib /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/rspec-core-3.7.1/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+DEPRECATION WARNING: The factory_girl gem is deprecated. Please upgrade to factory_bot. See https://github.com/thoughtbot/factory_bot/blob/v4.9.0/UPGRADE_FROM_FACTORY_GIRL.md for further instructions. (called from require at /home/ec2-user/environment/CSCE_606_github/hw-acceptance-unit-test-cycle/rottenpotatoes/spec/rails_helper.rb:1)
+/home/ec2-user/.rvm/gems/ruby-2.6.6/gems/activesupport-4.2.10/lib/active_support/core_ext/object/duplicable.rb:111: warning: BigDecimal.new is deprecated; use BigDecimal() method instead.
+DEPRECATION WARNING: Sprockets method `register_engine` is deprecated.
+Please register a mime type using `register_mime_type` then
+use `register_compressor` or `register_transformer`.
+https://github.com/rails/sprockets/blob/master/guides/extending_sprockets.md#supporting-all-versions-of-sprockets-in-processors
+ (called from block (2 levels) in <class:Railtie> at /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/sass-rails-5.0.5/lib/sass/rails/railtie.rb:57)
+DEPRECATION WARNING: Sprockets method `register_engine` is deprecated.
+Please register a mime type using `register_mime_type` then
+use `register_compressor` or `register_transformer`.
+https://github.com/rails/sprockets/blob/master/guides/extending_sprockets.md#supporting-all-versions-of-sprockets-in-processors
+ (called from block (2 levels) in <class:Railtie> at /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/sass-rails-5.0.5/lib/sass/rails/railtie.rb:58)
+.....
+
+Deprecation Warnings:
+
+Using `should_receive` from rspec-mocks' old `:should` syntax without explicitly enabling the syntax is deprecated. Use the new `:expect` syntax or explicitly enable `:should` instead. Called from /home/ec2-user/environment/CSCE_606_github/hw-acceptance-unit-test-cycle/rottenpotatoes/spec/controllers/movies_controller_spec.rb:12:in `block (3 levels) in <top (required)>'.
+
+Using `should` from rspec-expectations' old `:should` syntax without explicitly enabling the syntax is deprecated. Use the new `:expect` syntax or explicitly enable `:should` with `config.expect_with(:rspec) { |c| c.syntax = :should }` instead. Called from /home/ec2-user/environment/CSCE_606_github/hw-acceptance-unit-test-cycle/rottenpotatoes/spec/models/movie_spec.rb:13:in `block (4 levels) in <top (required)>'.
+
+
+If you need more of the backtrace for any of these deprecations to
+identify where to make the necessary changes, you can configure
+`config.raise_errors_for_deprecations!`, and it will turn the
+deprecation warnings into errors, giving you the full backtrace.
+
+2 deprecation warnings total
+
+Finished in 0.15017 seconds (files took 1.62 seconds to load)
+5 examples, 0 failures
+
+Coverage report generated for RSpec to /home/ec2-user/environment/CSCE_606_github/hw-acceptance-unit-test-cycle/rottenpotatoes/coverage. 27 / 84 LOC (32.14%) covered.
