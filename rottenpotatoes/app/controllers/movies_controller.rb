@@ -3,14 +3,7 @@ class MoviesController < ApplicationController
   def show
     id = params[:id] # retrieve movie ID from URI route
     @movie = Movie.find(id) # look up movie by unique ID
-    @id = id
     # will render app/views/movies/show.<extension> by default
-    @dirname = Movie.find(params[:id]).director
-    if @dirname == "" || @dirname == nil
-    @has_director = false
-    else
-    @has_director = true
-    end
   end
 
   def index
@@ -43,6 +36,11 @@ class MoviesController < ApplicationController
 
   def similar
     dirname = Movie.find(params[:id]).director
+    if dirname.nil? || dirname == ""
+      movie_title = Movie.find(params[:id]).title
+      flash[:notice] = "'#{movie_title}' has no director info."
+      redirect_to movies_path
+    end    
     @movies = Movie.with_director(dirname)
   end
 
